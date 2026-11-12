@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>체크리스트 도우미</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>체크리스트 도우미</h1>
+
+    <section>
+      <h2>1. 키워드 입력</h2>
+      <form id="kw-form">
+        <input id="kw-input" list="kw-list" placeholder="예: 배포" autocomplete="off">
+        <datalist id="kw-list"></datalist>
+        <button type="submit">체크리스트 생성</button>
+      </form>
+      <p id="kw-msg" class="msg"></p>
+    </section>
+
+    <section id="list-section" hidden>
+      <h2>2. 체크리스트 <span id="list-title" class="tag"></span></h2>
+      <ul id="checklist"></ul>
+      <button id="copy-btn" type="button">텍스트로 복사</button>
+    </section>
+
+    <section id="info-section" hidden>
+      <h2>3. 작업정보 입력</h2>
+      <textarea id="info" rows="5" placeholder="예: 운영 환경 긴급 배포, DB 변경 없음, 결제 API 연동 포함"></textarea>
+      <button id="apply-btn" type="button">체크리스트 수정 · 관련 키워드 찾기</button>
+
+      <div id="result" hidden>
+        <h3>적용된 규칙</h3>
+        <ul id="applied"></ul>
+        <h3>관련 키워드</h3>
+        <div id="related"></div>
+      </div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
