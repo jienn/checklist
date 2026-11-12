@@ -12,9 +12,11 @@
 
 ## 규칙 수정 (`rules.json`)
 
-- `keywords[]`: `keyword`(대표 키워드), `aliases`(별칭), `checklist`(기본 항목)
-- `modifiers[]`: 작업정보에 `triggers` 단어가 있으면 `add` 항목을 추가하고 `remove` 항목을 제거합니다. `keywords`를 지정하면 해당 키워드의 체크리스트에만 적용됩니다.
-- 관련 키워드: 작업정보 안에서 다른 `keyword`/`aliases`가 발견되면 칩으로 표시되고, 클릭하면 그 체크리스트로 전환됩니다.
+- `keywords[]`: `keyword`(대표 키워드), `aliases`(별칭), `phases`(단계별 기본 항목: `phase` 이름 + `items`)
+- `modifiers[]`: 작업정보에 `triggers` 단어가 있으면 `add` 항목을 추가하고 `remove` 항목을 제거합니다. `phase`로 추가할 단계를 지정하고(생략 시 마지막 단계), `keywords`를 지정하면 해당 키워드의 체크리스트에만 적용됩니다. 예시:
+  `{"id":"x","label":"긴급","triggers":["긴급"],"phase":"작업전","add":["상황실 보고"],"remove":[]}`
+- `relatedKeywords[]`: 작업정보 안에서 찾을 관련 키워드 목록입니다. 발견되면 태그로 표시됩니다.
+- 다른 체크리스트 키워드/별칭이 작업정보에 있으면 칩으로 표시되고, 클릭하면 그 체크리스트로 전환됩니다.
 
 ## 로컬 실행
 

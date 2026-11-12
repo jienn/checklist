@@ -16,6 +16,9 @@ ul { list-style:none; padding:0; margin:0; }
 #checklist li { padding:8px 0; border-bottom:1px solid var(--line); }
 #checklist label { display:flex; gap:8px; align-items:flex-start; cursor:pointer; }
 #checklist input { width:auto; margin-top:5px; }
+#checklist h3.phase { margin:14px 0 2px; font-size:.9rem; color:var(--accent); }
+#checklist h3.phase:first-child { margin-top:0; }
+.kwtag { display:inline-block; margin:0 6px 6px 0; padding:4px 10px; border-radius:999px; background:var(--add); color:var(--addfg); font-size:.85rem; }
 .done { text-decoration:line-through; opacity:.55; }
 .tag { font-size:.75rem; font-weight:600; background:var(--add); color:var(--addfg); padding:2px 8px; border-radius:999px; }
 .badge { font-size:.7rem; background:var(--add); color:var(--addfg); padding:1px 7px; border-radius:999px; margin-left:4px; }
